@@ -19,17 +19,31 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
+var random = Math.floor(Math.random()*4);
+var choices = ["rock", "paper", "scissors"];
 var userChoice="";
 var computerChoice="";
 var winner="";
 
-var choices = ["rock", "paper", "scissors"];
+
 
 
 
 //FUNCTIONS
 
+//randomization of choice
+
+function compchoice(){
+        var selection = choices[random];
+        computerChoice = selection; 
+        
+      
+}
+
 
 
 // DOCUMENT READY FUNCTION
-
+$(document).ready(function(){
+    console.log(choices[random]);   
+        
+});
