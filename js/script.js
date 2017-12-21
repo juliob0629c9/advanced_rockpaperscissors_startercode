@@ -47,12 +47,15 @@ function randomizer(){
 function compchoice(){
         randomizer();
         var selection = choices[random];
-        computerChoice = selection; 
+        var selectionU = selection.toUpperCase();
+        computerChoice = selectionU;
         console.log(computerChoice);
 }
 function userchoice(){
         var selection = $('.box').val();
-        userChoice = selection; 
+        var selectionU = selection.toUpperCase();
+        userChoice = selectionU; 
+
         console.log(userChoice);
 }
 function reset(){
@@ -65,23 +68,23 @@ function reset(){
              reset();
              compchoice();
              userchoice();
-            if (computerChoice == 'rock' && userChoice == 'paper' || computerChoice == 'paper' && userChoice == 'scissors'|| computerChoice == 'scissors' && userChoice == 'rock'){
+            if (computerChoice == 'ROCK' && userChoice == 'PAPER' || computerChoice == 'PAPER' && userChoice == 'SCISSORS'|| computerChoice == 'SCISSORS' && userChoice == 'ROCK'){
                     alert('You win!');
                     $("#UC").append("<br /> You chose " +userChoice+ "   ");
                     $("#UC").append("Computer chose " +computerChoice+ "  W");
                     
             } else {
-            if (computerChoice == 'rock' && userChoice == 'scissors' || computerChoice == 'paper' && userChoice == 'rock'|| computerChoice == 'scissors' && userChoice == 'paper'){
+            if (computerChoice == 'ROCK' && userChoice == 'SCISSORS' || computerChoice == 'PAPER' && userChoice == 'ROCK'|| computerChoice == 'SCISSORS' && userChoice == 'PAPER'){
                     alert('You LOSE!');
                     $("#UC").append("<br /> You chose " +userChoice+ "   ");
                     $("#UC").append("Computer chose " +computerChoice+ "  L");
             } else {
-            if (computerChoice == 'rock' && userChoice == 'rock' || computerChoice == 'paper' && userChoice == 'paper'|| computerChoice == 'scissors' && userChoice == 'scissors'){
+            if (computerChoice == 'ROCK' && userChoice == 'ROCK' || computerChoice == 'PAPER' && userChoice == 'PAPER'|| computerChoice == 'SCISSORS' && userChoice == 'SCISSORS'){
                     alert('You TIE!');
                     $("#UC").append("<br /> You chose " +userChoice+ "   ");
                     $("#UC").append("Computer chose " +computerChoice+ "  T");
             } else {
-            if (userChoice != 'rock' || userChoice != 'paper' || userChoice != 'scissors') {
+            if (userChoice != 'ROCK' || userChoice != 'PAPER' || userChoice != 'SCISSORS') {
                     alert("Do you not know how to play?");
             }  
             }
